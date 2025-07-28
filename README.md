@@ -1,4 +1,4 @@
-### next-translate
+### Next Translate
 
 Official SDK to integrate your translation system into your Next.js application.
 
@@ -9,29 +9,31 @@ Official SDK to integrate your translation system into your Next.js application.
 
     Support getStaticProps, getServerSideProps
 
-    Organize translations by locale and namespace 
+    Organize translations by locale and namespace
 
 ### 📥 Installation
 
-```bash 
+```bash
 npm install @next-translate/sdk
 # or
 yarn add @next-translate/sdk
 ```
 
-### Setting
+### 🔧 Setting
 
 1.Get token
 
-    Login and navigate to Developer page on next-translate platform
+    Login via `https://next-translate.com` and navigate to Developer page on next-translate platform
 
     Generate API token
 
-
 ### How to use in Nextjs project
+
 1. Support getStaticProps
 
-```bash 
+Example: pages/index.tsx
+
+```bash
 import { loadServerTranslations } from '@next-translate/sdk';
 
 export async function getStaticProps({ locale }: { locale: string }) {
@@ -49,10 +51,10 @@ export default function Home({ translations }: any) {
 ```
 
 2. Support newest version of Nextjs
-//next.config.js or middleware.ts in Nextjs
 
+   In next.config.js or middleware.ts in Nextjs
 
-```bash 
+```bash
 import { createTranslateClient } from '@next-translate/sdk';
 
 const client = createTranslateClient({ token: process.env.NEXT_TRANSLATE_TOKEN });
@@ -71,10 +73,12 @@ const translations = await i18nClient.getTranslations({
 });
 
 ```
-### Structural translation (On the platform)
+
+### 📁 Structural translation (On the platform)
 
 Each locale may have many namespace
-Example namespace `common`
+
+Example namespace `common`:
 
 ```bash
 {
