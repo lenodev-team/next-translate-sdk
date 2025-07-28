@@ -1,0 +1,28 @@
+{
+  "name": "@next-translate/sdk",
+  "version": "0.1.0",
+  "description": "Official SDK to connect with next-translate platform",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lenodev-team/next-translate-sdk.git"
+  },
+  "keywords": ["i18n", "translation", "sdk", "nextjs"],
+  "author": "Lenodev team",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
